@@ -1,0 +1,75 @@
+// ===== HOME SECTION =====
+.home {
+  &__content {
+    row-gap: 1rem;
+  }
+
+  // home group
+  &__group {
+    position: relative;
+    display: grid;
+    padding-top: 2rem;
+
+    &-img {
+      height: 250px;
+      justify-self: center;
+    }
+
+    &-indicator {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: var(--title-color);
+      border-radius: 50%;
+      top: 7rem;
+      right: 2rem;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 48px;
+        background-color: var(--title-color);
+        top: -3rem;
+        right: 45%;
+      }
+    }
+
+    &-details {
+      position: absolute;
+      right: 0.5rem;
+    }
+
+    &-title,
+    &-subtitle {
+      display: block;
+      font-size: var(--small-font-size);
+      text-align: right;
+    }
+  }
+
+  // home data
+  &__data {
+    &-subtitle {
+      font-size: var(--h3-font-size);
+      text-transform: uppercase;
+    }
+
+    &-title {
+      font-size: var(--biggest-font-size);
+      font-weight: var(--font-black);
+      line-height: 109%;
+    }
+
+    &-subtitle,
+    &-title,
+    &-description {
+      margin-bottom: var(--margin-1);
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

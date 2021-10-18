@@ -1,0 +1,349 @@
+// ===== BREAKPOINT =====
+// For small devices
+@media screen and (max-width: 320px) {
+  .container {
+    margin: 0 var(--margin-1);
+  }
+
+  // Home Section
+  .home {
+    &__img {
+      height: 200px;
+    }
+
+    .buttons {
+      flex-direction: column;
+      width: max-content;
+      row-gap: 1rem;
+    }
+  }
+
+  // Category & Trick Section
+  .category__container,
+  .trick__container {
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+  }
+}
+
+// For medium devices
+@media screen and (min-width: 576px) {
+  // About Section
+  .about__container {
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+  }
+
+  // Newsletter Section
+  .newsletter {
+    &__container {
+      display: grid;
+      grid-template-columns: 0.7fr;
+      justify-content: center;
+    }
+
+    &__description {
+      padding: 0 3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    margin-top: calc(var(--header-height) + 3rem);
+  }
+
+  .header {
+    height: calc(var(--header-height) + 3rem);
+
+    // STICKY HEADER
+    &.sticky-header {
+      height: calc(var(--header-height) + 1rem);
+    }
+  }
+
+  .section {
+    padding: 7rem 0 2rem;
+  }
+
+  // Header Section
+  .nav {
+    position: relative;
+
+    &__menu {
+      display: flex;
+
+      &-list {
+        flex-direction: row;
+        column-gap: 3rem;
+      }
+
+      &-link {
+        text-transform: initial;
+        font-weight: initial;
+      }
+
+      &-close,
+      &-img {
+        display: none;
+      }
+    }
+
+    &__toggle {
+      display: none;
+    }
+  }
+
+  // Home Section
+  .home {
+    &__content {
+      padding: 5rem 0 2rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+
+    &__img {
+      height: 300px;
+    }
+  }
+
+  // Swiper Pagination
+  .swiper-pagination {
+    margin-top: var(--margin-2);
+  }
+
+  // Category Section
+  .category {
+    &__container {
+      grid-template-columns: repeat(3, 200px);
+      justify-content: center;
+    }
+  }
+
+  // About Section
+  .about {
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+
+    &__title,
+    &__data {
+      text-align: initial;
+    }
+
+    &__img {
+      width: 250px;
+    }
+  }
+
+  // Trick Section
+  .trick {
+    &__container {
+      grid-template-columns: repeat(3, 200px);
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+
+  // Discount Section
+  .discount {
+    &__container {
+      grid-template-columns: repeat(2, max-content);
+      justify-content: center;
+      align-items: center;
+      column-gap: 3rem;
+      padding: 3rem 0;
+      border-radius: 3rem;
+    }
+
+    &__img {
+      width: 350px;
+      order: -1;
+    }
+
+    &__data {
+      padding-right: 6rem;
+    }
+  }
+
+  // Newsletter Section
+  .newsletter__container {
+    grid-template-columns: 0.5fr;
+  }
+
+  // Footer Section
+  .footer {
+    &__container {
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      column-gap: 1rem;
+    }
+
+    &__img-two {
+      right: initial;
+      bottom: 0 !important;
+      left: 15%;
+    }
+  }
+}
+
+// For large devices
+@media screen and (min-width: 992px) {
+  .container {
+    margin: 0 auto;
+  }
+
+  .section__title {
+    font-size: var(--h1-font-size);
+    margin-bottom: 3rem;
+  }
+
+  // Home Section
+  .home {
+    &__content {
+      gap: 3rem;
+    }
+
+    &__group {
+      padding-top: 0;
+
+      &-img {
+        height: 400px;
+        transform: translateY(-3rem);
+      }
+
+      &-indicator {
+        top: initial;
+        right: initial;
+        bottom: 15%;
+        left: 45%;
+
+        &::after {
+          top: 0;
+          height: 75px;
+        }
+      }
+
+      &-details {
+        bottom: 0;
+        right: 58%;
+      }
+    }
+
+    &__data {
+      &-title {
+        margin-bottom: var(--margin-1-5);
+      }
+
+      &-description {
+        margin-bottom: var(--margin-2-5);
+        padding-right: 2rem;
+      }
+    }
+  }
+
+  // Category Section
+  .category {
+    &__container {
+      column-gap: 8rem;
+    }
+
+    &__img {
+      width: 200px;
+    }
+  }
+
+  // About Section
+  .about {
+    &__container {
+      column-gap: 7rem;
+    }
+
+    &__img {
+      width: 350px;
+    }
+
+    &__description {
+      padding-right: 2rem;
+    }
+  }
+
+  // Trick Section
+  .trick {
+    &__container {
+      gap: 3.5rem;
+    }
+
+    &__content {
+      border-radius: 1.5rem;
+    }
+
+    &__img {
+      width: 110px;
+    }
+
+    &__title {
+      font-size: var(--h3-font-size);
+    }
+  }
+
+  // Discount Section
+  .discount__container {
+    column-gap: 7rem;
+  }
+
+  // New Arrivals Section
+  .new {
+    &__content {
+      width: 310px;
+      border-radius: 1rem;
+      padding: 2rem 0;
+    }
+
+    &__img {
+      width: 150px;
+    }
+
+    &__img,
+    &__subtitle {
+      margin-bottom: var(--margin-1);
+    }
+
+    &__title {
+      font-size: var(--h3-font-size);
+    }
+  }
+
+  // Footer Section
+  .footer__copy {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  // Home Section
+  .home {
+    &__img {
+      width: 420px;
+    }
+  }
+
+  // Swiper Pagination
+  .swiper-pagination {
+    margin-top: var(--margin-2-5);
+  }
+
+  // Footer Section
+  .footer {
+    &__img-one {
+      width: 120px;
+    }
+
+    &__img-two {
+      width: 180px;
+      top: 30%;
+      left: -3%;
+    }
+  }
+}

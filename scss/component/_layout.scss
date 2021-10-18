@@ -1,0 +1,41 @@
+// ===== REUSABLE CSS SECTION =====
+.section {
+  padding: 4.5rem 0 2rem;
+
+  &__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--margin-2);
+    text-align: center;
+  }
+}
+
+// ===== LAYOUT =====
+.container {
+  max-width: 968px;
+  margin: 0 var(--margin-1-5);
+}
+
+.grid {
+  display: grid;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: calc(var(--header-height) + 2rem);
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #fff, $alpha: 0);
+  z-index: var(--z-fixed);
+  transition: 0.3s;
+
+  // STICKY HEADER
+  &.sticky-header {
+    height: var(--header-height);
+    background: var(--body-color);
+  }
+}

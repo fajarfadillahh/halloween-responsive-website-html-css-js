@@ -1,0 +1,23 @@
+// ===== SWIPER CLASS =====
+.swiper-pagination {
+  position: initial;
+  margin-top: 1rem;
+
+  &-bullet {
+    width: 5px;
+    height: 5px;
+    background-color: var(--title-color);
+    opacity: 1;
+  }
+
+  &-bullet-active {
+    width: 1.5rem;
+    height: 5px;
+    border-radius: 0.5rem;
+  }
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 0.5rem;
+}

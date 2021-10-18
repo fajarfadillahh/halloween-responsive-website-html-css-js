@@ -1,0 +1,25 @@
+// ===== CATEGORY SECTION =====
+.category {
+  &__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+  }
+
+  &__data {
+    text-align: center;
+
+    &:hover .category__img {
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  &__img {
+    width: 120px;
+    margin-bottom: var(--margin-0-75);
+    transition: 0.3s;
+  }
+
+  &__title {
+    margin-bottom: var(--margin-0-25);
+  }
+}
